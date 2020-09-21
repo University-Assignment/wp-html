@@ -204,6 +204,8 @@
 |footer|페이지의 푸터 영역|
 |||
 
+<br>
+
 ## HTML 관련 VScode Extensions
 
 |이름|설명|
@@ -211,6 +213,8 @@
 |Auto Rename Tag|태그를 수정할 때 시작 태그와 닫기 태그를 같이 수정해야 하는 번거로움을 해소|
 |htmltagwrap|선택 영역을 태그로 감싸야 하는 경우 유용한 확장 기능|
 |||
+
+<br>
 
 ## 멀티미디어 관련 태그
 
@@ -273,6 +277,7 @@ width와 height 속성은 CSS로 처리가 가능하므로 잘 사용되지 않�
 |width|동영상의 너비 지정|
 |height|동영상의 높이 지정|
 |||
+
 video 태그에서도 source 태그의 사용이 가능하며, 사용 방법은 audio 태그와 동일
 
 ```html
@@ -311,7 +316,7 @@ video 태그에서도 source 태그의 사용이 가능하며, 사용 방법은 
       <input id="email" type="email" name="email" placeholder="이메일 입력"><br>
       ... 생략
     </fieldset>
-    
+
     <input type="submit" value="회원가입">
 </form>
 
@@ -355,6 +360,7 @@ video 태그에서도 source 태그의 사용이 가능하며, 사용 방법은 
 |number|숫자 입력 양식 생성|
 |date|날짜 입력 양식 생성|
 |||
+
 input 태그의 type 속성값이 button, reset, submit의 경우는 button  태그를 사용할 수도 있음
 
 ```html
