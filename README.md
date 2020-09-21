@@ -228,7 +228,9 @@
 |width|이미지의 너비 지정|
 |height|이미지의 높이 지정|
 |||
+
 width와 height 속성은 CSS로 처리가 가능하므로 잘 사용되지 않음
+
 ```html
 <img src="https://picsum.photos/seed/picsum/300/200" alt="picsum image">
 ```
