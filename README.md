@@ -216,16 +216,236 @@
 
 ### 이미지 태그
 
+**img 태그의 주요 속성**
+|속성이름|설명|
+|-|-|
+|src|이미지의 주소를 지정|
+|alt|이미지를 로드할 수 없을 경우 나오는 글자 지정|
+|width|이미지의 너비 지정|
+|height|이미지의 높이 지정|
+|||
+width와 height 속성은 CSS로 처리가 가능하므로 잘 사용되지 않음
+```html
+<img src="https://picsum.photos/seed/picsum/300/200" alt="picsum image">
+```
+
+<br>
+
 ### 오디오 태그
+
+**audio 태그의 주요 속성**
+|속성이름|설명|
+|-|-|
+|src|음악 파일의 경로 지정|
+|preload|음악을 재생하기 전에 모두 불러올지 지정|
+|autoplay|자동 재생 여부 지정|
+|loop|반복 재생 여부 지정|
+|controls|음악 재생 도구 출력 여부 지정|
+|||
+
+```html
+<audio src="<오디오파일경로>" controls></audio>
+```
+**source 태그**
+- 브라우저와 브라우저의 버전마다 지원하는 음악 파일의 종류가 다를 수 있음
+- source 태그는 이러한 문제를 해결하기 위한 태그
+
+```html
+<audio controls autoplay>
+  <source src="<오디오파일경로1>" type="audio/mp3">
+  <source src="<오디오파일경로2>" type="audio/ogg">
+</audio>
+```
+
+<br>
 
 ### 비디오 태그
 
+**video 태그의 주요 속성**
+|속성이름|설명|
+|-|-|
+|src|동영상 파일의 경로 지정|
+|poster|동영상 준비 중일 때의 이미지 파일의 경로 지정|
+|preload|비디오를 재생하기 전에 모두 불러올지 지정|
+|autoplay|자동 재생 여부 지정|
+|loop|반복 재생 여부 지정|
+|controls|동영상 재생 도구 출력 여부 지정|
+|width|동영상의 너비 지정|
+|height|동영상의 높이 지정|
+|||
+video 태그에서도 source 태그의 사용이 가능하며, 사용 방법은 audio 태그와 동일
+
+```html
+<video controls height="300">
+    <source src="./videos/01.mp4" type="video/mp4">
+</video>
+```
+
+<br>
+
 ## 입력 양식 태그
+입력 양식 태그는 입력 양식을 만들 때 사용하는 태그
+- 입력 양식을 제대로 다루기 위해서는 HTTP에 대한 지식이 있어야 함
+
 
 ### form 태그
 
+**form 태그**
+- 입력 양식을 만들기 위한 태그
+- form 태그 내부에 다양한 입력을 위한 태그들을 배치하여 입력 양식을 작성
+- 입력을 위한 태그: input, select, textarea 등
+
+**form 태그의 속성**
+
+|속성이름|설명|
+|-|-|
+|action|입력 데이터의 전달 위치 지정|
+|method|입력 데이터의 전달 방식 지정|
+|||
+
+```html
+<form>
+    <fieldset>
+      <legend>기본 정보</legend>
+      <label for="email">이메일</label>
+      <input id="email" type="email" name="email" placeholder="이메일 입력"><br>
+      ... 생략
+    </fieldset>
+    
+    <input type="submit" value="회원가입">
+</form>
+
+
+```
+
+<br>
+
 ### input 태그
+
+**input 태그**
+- 사용자로부터 정보를 입력 받는 기능을 수행하는 태그
+
+**input 태그의 속성**
+
+|속성이름|설명|
+|-|-|
+|type|입력 양식의 종류를 결정하는 속성값(하단 표 참고)|
+|name|서버로 양식을 전송할 때, 각 입력항목을 구분하기 위한 이름값 설정|
+|placeholder|사용자가 값을 입력하지 않았을 때 안내 글을 작성|
+|disabled|입력 양식을 비활성화|
+|readonly|입력 양식에 값을 쓸 수 없고 읽기만 가능하게 함|
+|value|입력 양식의 값|
+|||
+
+**type 속성 값**
+|속성 값|설명|
+|-|-|
+|button|버튼 생성|
+|checkbox|체크박스 생성|
+|file|파일 입력 양식 생성|
+|hidden|보이지 않는 양식 생성|
+|image|이미지 형태 생성|
+|password|비밀번호 입력 양식 생성|
+|radio|라디오 버튼 생성|
+|reset|초기화 버튼 생성|
+|submit|제출 버튼 생성|
+|text|글자 입력 양식 생성|
+|email|이메일 입력 양식 생성|
+|tel|전화번호 입력 양식 생성|
+|number|숫자 입력 양식 생성|
+|date|날짜 입력 양식 생성|
+|||
+input 태그의 type 속성값이 button, reset, submit의 경우는 button  태그를 사용할 수도 있음
+
+```html
+<input id="email" type="email" name="email" placeholder="이메일 입력"><br>
+```
+
+
+<br>
 
 ### textarea, select, button 태그
 
+**textarea 태그**
+- 사용자로부터 여러 줄의 텍스트를 입력 받는 기능을 수행하는 태그
+
+**textarea 태그의 속성**
+
+|속성이름|설명|
+|-|-|
+|cols|태그의 너비를 저정(하나의 라인에 입력되는 글자 수)|
+|rows|태그의 높이를 지정(라인 수)|
+|name|input 태그의 name 속성과 동일|
+|placeholder|input 태그의 placeholder 속성과 동일|
+|disabled|input 태그의 disabled 속성과 동일|
+|||
+
+```html
+<textarea id="intro" name="intro"
+          cols="50" rows="4" placeholder="200자이내로 입력"></textarea>
+```
+
+**select 태그**
+- 여러 개의 목록에서 몇 가지를 선택할 수 있는 입력 양식 요소
+
+**select 태그 및 select 태그와  함께 사용되는 태그**
+
+|태그이름|설명|
+|-|-|
+|select|선택 양식을 생성|
+|optgroup|옵션을 그룹화|
+|option|선택할 수 있는 옵션을 생성|
+|||
+
+**select 태그의 속성**
+
+|속성이름|설명|
+|-|-|
+|name|input 태그의 name 속성과 동일|
+|multiple|여러 옵션을 선택할 수 있게 함|
+|disabled|input 태그의 disabled 속성과 동일|
+|||
+
+```html
+      <select id="hobbies" name="hobby" multiple>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JavaScript</option>
+        <option value="node">Node.js</option>
+        <option value="db">Database</option>
+      </select><br>
+
+```
+
+**label 태그**
+- input 태그와 같은 입력 양식에 대한 설명을 넣기 위해 사용
+
+**label 태그의 속성**
+
+|속성이름|설명|
+|-|-|
+|for|label과 연결할 입력 양식 태그를 설정(입력 양식의 id 속성값)|
+|||
+
+```html
+<form>
+  <label for="nickname">닉네임</label>
+  <input id="nickname" type="text" name="nickname" placeholder="닉네임을 입력해주세요">
+</form>
+```
+
+<br>
+
 ### fieldset과 legend 태그
+
+**fieldset 태그**
+- 입력 양식들을 하나의 그룹으로 묶기 위해 사용 
+
+**legend 태그**
+- fieldset에 대한 설명을 제공
+
+```html
+    <fieldset>
+      <legend>추가 정보</fieldset>
+    </fieldset>
+```
